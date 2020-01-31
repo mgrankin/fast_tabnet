@@ -11,37 +11,37 @@ from .tab_network import *
 
 # Cell
 class TabNet(nn.Module):
+    """
+    Defines TabNet network
+    Parameters
+    ----------
+    - input_dim : int
+        Initial number of features
+    - output_dim : int
+        Dimension of network output
+        examples : one for regression, 2 for binary classification etc...
+    - n_d : int
+        Dimension of the prediction  layer (usually between 4 and 64)
+    - n_a : int
+        Dimension of the attention  layer (usually between 4 and 64)
+    - n_steps: int
+        Number of sucessive steps in the newtork (usually betwenn 3 and 10)
+    - gamma : float
+        Float above 1, scaling factor for attention updates (usually betwenn 1.0 to 2.0)
+    - momentum : float
+        Float value between 0 and 1 which will be used for momentum in all batch norm
+    - n_independent : int
+        Number of independent GLU layer in each GLU block (default 2)
+    - n_shared : int
+        Number of independent GLU layer in each GLU block (default 2)
+    - epsilon: float
+        Avoid log(0), this should be kept very low
+    """
     def __init__(self, input_dim, output_dim,
                  n_d=8, n_a=8,
                  n_steps=3, gamma=1.3,
                  n_independent=2, n_shared=2, epsilon=1e-15,
                  virtual_batch_size=128, momentum=0.02):
-        """
-        Defines TabNet network
-        Parameters
-        ----------
-        - input_dim : int
-            Initial number of features
-        - output_dim : int
-            Dimension of network output
-            examples : one for regression, 2 for binary classification etc...
-        - n_d : int
-            Dimension of the prediction  layer (usually between 4 and 64)
-        - n_a : int
-            Dimension of the attention  layer (usually between 4 and 64)
-        - n_steps: int
-            Number of sucessive steps in the newtork (usually betwenn 3 and 10)
-        - gamma : float
-            Float above 1, scaling factor for attention updates (usually betwenn 1.0 to 2.0)
-        - momentum : float
-            Float value between 0 and 1 which will be used for momentum in all batch norm
-        - n_independent : int
-            Number of independent GLU layer in each GLU block (default 2)
-        - n_shared : int
-            Number of independent GLU layer in each GLU block (default 2)
-        - epsilon: float
-            Avoid log(0), this should be kept very low
-        """
         super(TabNet, self).__init__()
         self.input_dim = input_dim
         self.output_dim = output_dim

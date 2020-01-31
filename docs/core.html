@@ -42,27 +42,30 @@ summary: "Integrating TabNet with fastai."
 <div class="output_markdown rendered_html output_subarea ">
 <h2 id="TabNet" class="doc_header"><code>class</code> <code>TabNet</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L13" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TabNet</code>(<strong><code>input_dim</code></strong>, <strong><code>output_dim</code></strong>, <strong><code>n_d</code></strong>=<em><code>8</code></em>, <strong><code>n_a</code></strong>=<em><code>8</code></em>, <strong><code>n_steps</code></strong>=<em><code>3</code></em>, <strong><code>gamma</code></strong>=<em><code>1.3</code></em>, <strong><code>n_independent</code></strong>=<em><code>2</code></em>, <strong><code>n_shared</code></strong>=<em><code>2</code></em>, <strong><code>epsilon</code></strong>=<em><code>1e-15</code></em>, <strong><code>virtual_batch_size</code></strong>=<em><code>128</code></em>, <strong><code>momentum</code></strong>=<em><code>0.02</code></em>) :: <code>Module</code></p>
 </blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>Defines TabNet network</p>
+<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters">&#182;</a></h2><ul>
+<li>input_dim : int
+  Initial number of features</li>
+<li>output_dim : int
+  Dimension of network output
+  examples : one for regression, 2 for binary classification etc...</li>
+<li>n_d : int
+  Dimension of the prediction  layer (usually between 4 and 64)</li>
+<li>n_a : int
+  Dimension of the attention  layer (usually between 4 and 64)</li>
+<li>n_steps: int
+  Number of sucessive steps in the newtork (usually betwenn 3 and 10)</li>
+<li>gamma : float
+  Float above 1, scaling factor for attention updates (usually betwenn 1.0 to 2.0)</li>
+<li>momentum : float
+  Float value between 0 and 1 which will be used for momentum in all batch norm</li>
+<li>n_independent : int
+  Number of independent GLU layer in each GLU block (default 2)</li>
+<li>n_shared : int
+  Number of independent GLU layer in each GLU block (default 2)</li>
+<li>epsilon: float
+  Avoid log(0), this should be kept very low</li>
+</ul>
 
 </div>
 
