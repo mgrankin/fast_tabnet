@@ -9,7 +9,7 @@ import torch
 from torch.nn import Linear, BatchNorm1d, ReLU
 import numpy as np
 import fast_tabnet.sparsemax as sparsemax
-from copy import deepcopy
+
 
 def initialize_non_glu(module, input_dim, output_dim):
     gain_value = np.sqrt((input_dim+output_dim)/np.sqrt(4*input_dim))
@@ -47,6 +47,7 @@ class GBN(torch.nn.Module):
 
         return res
 
+
 class AttentiveTransformer(torch.nn.Module):
     def __init__(self, input_dim, output_dim, virtual_batch_size=128, momentum=0.02):
         """
@@ -81,7 +82,7 @@ class AttentiveTransformer(torch.nn.Module):
 
 
 class FeatTransformer(torch.nn.Module):
-    def __init__(self, input_dim, output_dim, shared_blocks, n_glu,
+    def __init__(self, input_dim, output_dim, shared_layers, n_glu,
                  virtual_batch_size=128, momentum=0.02):
         super(FeatTransformer, self).__init__()
         """
@@ -93,29 +94,29 @@ class FeatTransformer(torch.nn.Module):
             Input size
         - output_dim : int
             Outpu_size
-        - shared_blocks : torch.nn.Module
+        - shared_blocks : torch.nn.ModuleList
             The shared block that should be common to every step
         - momentum : float
             Float value between 0 and 1 which will be used for momentum in batch norm
         """
 
-        self.shared = deepcopy(shared_blocks)
-        if self.shared is not None:
-            for l in self.shared.glu_layers:
-                l.bn = GBN(2*output_dim, virtual_batch_size=virtual_batch_size,
-                           momentum=momentum)
+        params = {
+            'n_glu': n_glu,
+            'virtual_batch_size': virtual_batch_size,
+            'momentum': momentum
+        }
 
-        if self.shared is None:
+        if shared_layers is None:
             self.specifics = GLU_Block(input_dim, output_dim,
-                                       n_glu=n_glu,
                                        first=True,
-                                       virtual_batch_size=virtual_batch_size,
-                                       momentum=momentum)
+                                       **params)
         else:
+            self.shared = GLU_Block(input_dim, output_dim,
+                                    first=True,
+                                    shared_layers=shared_layers,
+                                    **params)
             self.specifics = GLU_Block(output_dim, output_dim,
-                                       n_glu=n_glu,
-                                       virtual_batch_size=virtual_batch_size,
-                                       momentum=momentum)
+                                       **params)
 
     def forward(self, x):
         if self.shared is not None:
@@ -128,25 +129,32 @@ class GLU_Block(torch.nn.Module):
     """
         Independant GLU block, specific to each step
     """
-    def __init__(self, input_dim, output_dim, n_glu=2, first=False,
+    def __init__(self, input_dim, output_dim, n_glu=2, first=False, shared_layers=None,
                  virtual_batch_size=128, momentum=0.02):
         super(GLU_Block, self).__init__()
         self.first = first
+        self.shared_layers = shared_layers
         self.n_glu = n_glu
         self.glu_layers = torch.nn.ModuleList()
-        self.scale = torch.sqrt(torch.FloatTensor([0.5]))
-        for glu_id in range(self.n_glu):
-            if glu_id == 0:
-                self.glu_layers.append(GLU_Layer(input_dim, output_dim,
-                                                 virtual_batch_size=virtual_batch_size,
-                                                 momentum=momentum))
-            else:
-                self.glu_layers.append(GLU_Layer(output_dim, output_dim,
-                                                 virtual_batch_size=virtual_batch_size,
-                                                 momentum=momentum))
+
+
+        params = {
+            'virtual_batch_size': virtual_batch_size,
+            'momentum': momentum
+        }
+
+        fc = shared_layers[0] if shared_layers else None
+        self.glu_layers.append(GLU_Layer(input_dim, output_dim,
+                                         fc=fc,
+                                         **params))
+        for glu_id in range(1, self.n_glu):
+            fc = shared_layers[glu_id] if shared_layers else None
+            self.glu_layers.append(GLU_Layer(output_dim, output_dim,
+                                             fc=fc,
+                                             **params))
 
     def forward(self, x):
-        self.scale = self.scale.to(x.device)
+        scale = torch.sqrt(torch.FloatTensor([0.5]).to(x.device))
         if self.first:  # the first layer of the block has no scale multiplication
             x = self.glu_layers[0](x)
             layers_left = range(1, self.n_glu)
@@ -155,17 +163,20 @@ class GLU_Block(torch.nn.Module):
 
         for glu_id in layers_left:
             x = torch.add(x, self.glu_layers[glu_id](x))
-            x = x*self.scale
+            x = x*scale
         return x
 
 
 class GLU_Layer(torch.nn.Module):
-    def __init__(self, input_dim, output_dim,
+    def __init__(self, input_dim, output_dim, fc=None,
                  virtual_batch_size=128, momentum=0.02):
         super(GLU_Layer, self).__init__()
 
         self.output_dim = output_dim
-        self.fc = Linear(input_dim, 2*output_dim, bias=False)
+        if fc:
+            self.fc = fc
+        else:
+            self.fc = Linear(input_dim, 2*output_dim, bias=False)
         initialize_glu(self.fc, input_dim, 2*output_dim)
 
         self.bn = GBN(2*output_dim, virtual_batch_size=virtual_batch_size,
