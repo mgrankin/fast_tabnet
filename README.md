@@ -1269,6 +1269,354 @@ optimizer.maximize(
 
 
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.244845</td>
+      <td>0.162216</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.152529</td>
+      <td>0.143890</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.134093</td>
+      <td>0.119078</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.123151</td>
+      <td>0.114896</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.118943</td>
+      <td>0.114241</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [95m 11      [0m | [95m-0.1142  [0m | [95m 0.1011  [0m | [95m 7.301   [0m | [95m 0.3318  [0m |
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.142999</td>
+      <td>0.161638</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.133412</td>
+      <td>0.120533</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.126682</td>
+      <td>0.119148</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.124139</td>
+      <td>0.114975</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.120500</td>
+      <td>0.115238</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [0m 12      [0m | [0m-0.1152  [0m | [0m 1.466   [0m | [0m 1.523   [0m | [0m 0.6053  [0m |
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1.292738</td>
+      <td>0.216998</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.342039</td>
+      <td>0.196274</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.207225</td>
+      <td>0.155081</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.170700</td>
+      <td>0.151608</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.156820</td>
+      <td>0.148455</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [0m 13      [0m | [0m-0.1485  [0m | [0m 3.104   [0m | [0m 6.879   [0m | [0m 3.043   [0m |
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.248299</td>
+      <td>0.242661</td>
+      <td>0.757500</td>
+      <td>00:05</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.248616</td>
+      <td>0.242500</td>
+      <td>0.757500</td>
+      <td>00:05</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.247367</td>
+      <td>0.242500</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.243612</td>
+      <td>0.242500</td>
+      <td>0.757500</td>
+      <td>00:05</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.248120</td>
+      <td>0.242500</td>
+      <td>0.757500</td>
+      <td>00:05</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [0m 14      [0m | [0m-0.2425  [0m | [0m 6.56    [0m | [0m 0.3284  [0m | [0m 1.299   [0m |
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.421470</td>
+      <td>0.166623</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.186513</td>
+      <td>0.165642</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.152764</td>
+      <td>0.137757</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.142408</td>
+      <td>0.135240</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.138158</td>
+      <td>0.131554</td>
+      <td>0.757500</td>
+      <td>00:09</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [0m 15      [0m | [0m-0.1316  [0m | [0m 0.632   [0m | [0m 4.901   [0m | [0m 3.857   [0m |
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.167871</td>
+      <td>0.171308</td>
+      <td>0.757500</td>
+      <td>00:03</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.142500</td>
+      <td>0.133382</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.127953</td>
+      <td>0.120554</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.122714</td>
+      <td>0.118568</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.123305</td>
+      <td>0.116220</td>
+      <td>0.757500</td>
+      <td>00:04</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    | [0m 16      [0m | [0m-0.1162  [0m | [0m 4.026   [0m | [0m 4.246   [0m | [0m 0.0     [0m |
+
+
+
 
     <div>
         <style>
@@ -1283,8 +1631,8 @@ optimizer.maximize(
                 background: #F44336;
             }
         </style>
-      <progress value='0' class='' max='5', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      0.00% [0/5 00:00<00:00]
+      <progress value='2' class='' max='5', style='width:300px; height:20px; vertical-align: middle;'></progress>
+      40.00% [2/5 00:32<00:48]
     </div>
 
 <table border="1" class="dataframe">
@@ -1298,6 +1646,20 @@ optimizer.maximize(
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>0</td>
+      <td>5.261782</td>
+      <td>0.234573</td>
+      <td>0.757500</td>
+      <td>00:16</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.748920</td>
+      <td>0.271949</td>
+      <td>0.757500</td>
+      <td>00:16</td>
+    </tr>
   </tbody>
 </table><p>
 
@@ -1314,8 +1676,8 @@ optimizer.maximize(
                 background: #F44336;
             }
         </style>
-      <progress value='70' class='' max='125', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      56.00% [70/125 00:02<00:01 0.3725]
+      <progress value='102' class='' max='125', style='width:300px; height:20px; vertical-align: middle;'></progress>
+      81.60% [102/125 00:12<00:02 0.3221]
     </div>
 
 
