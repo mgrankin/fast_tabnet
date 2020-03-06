@@ -48,6 +48,9 @@ from fast_tabnet.core import *
 path = untar_data(URLs.ADULT_SAMPLE)
 df = pd.read_csv(path/'adult.csv')
 df_main,df_test = df.iloc[:10000].copy(),df.iloc[10000:].copy()
+```
+
+```python
 df_main.head()
 ```
 
@@ -519,7 +522,7 @@ learn.lr_find()
 
 
 
-![png](docs/images/output_19_2.png)
+![png](docs/images/output_20_2.png)
 
 
 ```python
