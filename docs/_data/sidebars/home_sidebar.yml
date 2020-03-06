@@ -12,9 +12,6 @@ entries:
     - output: web,pdf
       title: TabNet functionality
       url: /core
-    - output: web,pdf
-      title: Title
-      url: /tab_network
     output: web
     title: fast_tabnet
   output: web

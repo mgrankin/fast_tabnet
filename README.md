@@ -199,6 +199,9 @@ to = TabularPandas(df_main, procs, cat_names, cont_names, y_names="salary", spli
 
 ```python
 dbch = to.dataloaders()
+```
+
+```python
 dbch.valid.show_batch()
 ```
 
@@ -213,8 +216,6 @@ dbch.valid.show_batch()
       <th>occupation</th>
       <th>relationship</th>
       <th>race</th>
-      <th>age_na</th>
-      <th>fnlwgt_na</th>
       <th>education-num_na</th>
       <th>age</th>
       <th>fnlwgt</th>
@@ -225,162 +226,142 @@ dbch.valid.show_batch()
   <tbody>
     <tr>
       <th>0</th>
-      <td>Local-gov</td>
-      <td>HS-grad</td>
-      <td>Married-civ-spouse</td>
-      <td>Craft-repair</td>
-      <td>Husband</td>
-      <td>Black</td>
+      <td>Private</td>
+      <td>Bachelors</td>
+      <td>Never-married</td>
+      <td>Prof-specialty</td>
+      <td>Own-child</td>
+      <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>45.000000</td>
-      <td>556652.007499</td>
-      <td>9.0</td>
-      <td>&gt;=50k</td>
+      <td>22.0</td>
+      <td>244366.000980</td>
+      <td>13.0</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Private</td>
-      <td>Bachelors</td>
-      <td>Never-married</td>
-      <td>Sales</td>
+      <td>Some-college</td>
+      <td>Divorced</td>
+      <td>Other-service</td>
       <td>Not-in-family</td>
       <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>29.000000</td>
-      <td>176683.000072</td>
-      <td>13.0</td>
-      <td>&gt;=50k</td>
+      <td>49.0</td>
+      <td>28791.000012</td>
+      <td>10.0</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Private</td>
-      <td>Bachelors</td>
+      <td>HS-grad</td>
       <td>Married-civ-spouse</td>
       <td>Exec-managerial</td>
       <td>Husband</td>
       <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>29.000000</td>
-      <td>194939.999936</td>
-      <td>13.0</td>
-      <td>&lt;50k</td>
+      <td>40.0</td>
+      <td>445382.003158</td>
+      <td>9.0</td>
+      <td>&gt;=50k</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Private</td>
-      <td>HS-grad</td>
+      <td>Assoc-voc</td>
+      <td>Married-civ-spouse</td>
+      <td>Adm-clerical</td>
+      <td>Wife</td>
+      <td>Black</td>
+      <td>False</td>
+      <td>37.0</td>
+      <td>177284.999380</td>
+      <td>11.0</td>
+      <td>&gt;=50k</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Private</td>
+      <td>1st-4th</td>
       <td>Married-civ-spouse</td>
       <td>Transport-moving</td>
       <td>Husband</td>
       <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>29.000000</td>
-      <td>52635.998841</td>
-      <td>9.0</td>
+      <td>53.0</td>
+      <td>162380.999796</td>
+      <td>2.0</td>
       <td>&lt;50k</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>State-gov</td>
-      <td>Some-college</td>
-      <td>Married-civ-spouse</td>
-      <td>Machine-op-inspct</td>
-      <td>Husband</td>
-      <td>White</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>49.000000</td>
-      <td>122177.000557</td>
-      <td>10.0</td>
-      <td>&gt;=50k</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Private</td>
-      <td>12th</td>
-      <td>Married-civ-spouse</td>
-      <td>Machine-op-inspct</td>
-      <td>Other-relative</td>
-      <td>Other</td>
+      <td>HS-grad</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Not-in-family</td>
+      <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>28.000000</td>
-      <td>158737.000048</td>
-      <td>8.0</td>
+      <td>26.0</td>
+      <td>176520.000300</td>
+      <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Private</td>
+      <td>State-gov</td>
       <td>HS-grad</td>
       <td>Married-civ-spouse</td>
-      <td>Machine-op-inspct</td>
+      <td>Exec-managerial</td>
       <td>Husband</td>
       <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>55.999999</td>
-      <td>192868.999992</td>
+      <td>23.0</td>
+      <td>142546.999468</td>
       <td>9.0</td>
-      <td>&gt;=50k</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Self-emp-not-inc</td>
+      <td>Private</td>
+      <td>Assoc-voc</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Not-in-family</td>
+      <td>White</td>
+      <td>False</td>
+      <td>30.0</td>
+      <td>141117.999250</td>
+      <td>11.0</td>
+      <td>&lt;50k</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>?</td>
+      <td>Bachelors</td>
+      <td>Never-married</td>
+      <td>?</td>
+      <td>Own-child</td>
+      <td>Black</td>
+      <td>False</td>
+      <td>28.0</td>
+      <td>55949.999304</td>
+      <td>13.0</td>
+      <td>&lt;50k</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Private</td>
       <td>HS-grad</td>
       <td>Married-civ-spouse</td>
       <td>Craft-repair</td>
       <td>Husband</td>
       <td>White</td>
       <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>56.999999</td>
-      <td>65080.002276</td>
+      <td>65.0</td>
+      <td>192132.999984</td>
       <td>9.0</td>
-      <td>&gt;=50k</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Local-gov</td>
-      <td>Masters</td>
-      <td>Married-civ-spouse</td>
-      <td>Prof-specialty</td>
-      <td>Husband</td>
-      <td>White</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>50.000000</td>
-      <td>145165.999578</td>
-      <td>10.0</td>
-      <td>&gt;=50k</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Private</td>
-      <td>Assoc-voc</td>
-      <td>Never-married</td>
-      <td>Tech-support</td>
-      <td>Not-in-family</td>
-      <td>White</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>35.000000</td>
-      <td>186034.999925</td>
-      <td>11.0</td>
       <td>&lt;50k</td>
     </tr>
   </tbody>
@@ -420,8 +401,6 @@ to_tst.all_cols.head()
       <th>occupation</th>
       <th>relationship</th>
       <th>race</th>
-      <th>age_na</th>
-      <th>fnlwgt_na</th>
       <th>education-num_na</th>
       <th>age</th>
       <th>fnlwgt</th>
@@ -439,11 +418,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>2</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.456238</td>
-      <td>1.346622</td>
-      <td>1.164335</td>
+      <td>0.469354</td>
+      <td>1.334846</td>
+      <td>1.159394</td>
       <td>0</td>
     </tr>
     <tr>
@@ -455,11 +432,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>4</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-0.930752</td>
-      <td>1.259253</td>
-      <td>-0.419996</td>
+      <td>-0.927560</td>
+      <td>1.248194</td>
+      <td>-0.426780</td>
       <td>0</td>
     </tr>
     <tr>
@@ -471,11 +446,9 @@ to_tst.all_cols.head()
       <td>2</td>
       <td>5</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.040233</td>
-      <td>0.152193</td>
-      <td>-1.212162</td>
+      <td>1.057528</td>
+      <td>0.150221</td>
+      <td>-1.219867</td>
       <td>0</td>
     </tr>
     <tr>
@@ -487,11 +460,9 @@ to_tst.all_cols.head()
       <td>5</td>
       <td>5</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.529237</td>
-      <td>-0.282632</td>
-      <td>-0.419996</td>
+      <td>0.542875</td>
+      <td>-0.281036</td>
+      <td>-0.426780</td>
       <td>0</td>
     </tr>
     <tr>
@@ -503,11 +474,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>5</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0.748235</td>
-      <td>1.449564</td>
-      <td>0.372169</td>
+      <td>0.763441</td>
+      <td>1.436943</td>
+      <td>0.366307</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -520,7 +489,7 @@ to_tst.all_cols.head()
 emb_szs = get_emb_sz(to); print(emb_szs)
 ```
 
-    [(10, 6), (17, 8), (8, 5), (16, 8), (7, 5), (6, 4), (2, 2), (2, 2), (3, 3)]
+    [(10, 6), (17, 8), (8, 5), (16, 8), (7, 5), (6, 4), (3, 3)]
 
 
 That's the use of the model
@@ -543,7 +512,14 @@ learn.lr_find()
 
 
 
-![png](docs/images/output_18_1.png)
+
+
+    (0.2290867567062378, 2.5118865210060903e-07)
+
+
+
+
+![png](docs/images/output_19_2.png)
 
 
 ```python
@@ -564,73 +540,73 @@ learn.fit_one_cycle(10)
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.161420</td>
-      <td>0.163181</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.170135</td>
+      <td>0.146895</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>0.140478</td>
-      <td>0.127033</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.137417</td>
+      <td>0.132686</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>0.132842</td>
-      <td>0.117864</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.135086</td>
+      <td>0.125255</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>0.126220</td>
-      <td>0.115803</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.130153</td>
+      <td>0.123437</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>0.125338</td>
-      <td>0.117127</td>
-      <td>0.757500</td>
+      <td>0.126129</td>
+      <td>0.122279</td>
+      <td>0.763000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>0.123562</td>
-      <td>0.119050</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.124050</td>
+      <td>0.122519</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>0.121530</td>
-      <td>0.117025</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.122126</td>
+      <td>0.122373</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>0.116976</td>
-      <td>0.114524</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.120248</td>
+      <td>0.120394</td>
+      <td>0.763000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>0.113542</td>
-      <td>0.114590</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.117466</td>
+      <td>0.118759</td>
+      <td>0.763000</td>
+      <td>00:02</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>0.111071</td>
-      <td>0.114707</td>
-      <td>0.757500</td>
-      <td>00:04</td>
+      <td>0.115755</td>
+      <td>0.118642</td>
+      <td>0.763000</td>
+      <td>00:02</td>
     </tr>
   </tbody>
 </table>
@@ -691,7 +667,9 @@ optimizer.max
 
 
 
-    {'target': -0.11365877091884613,
-     'params': {'pow_n_a': 8.0, 'pow_n_d': 1.0475135442460393, 'pow_n_steps': 0.0}}
+    {'target': -0.11643998324871063,
+     'params': {'pow_n_a': 3.063993501843213,
+      'pow_n_d': 4.3649224287800035,
+      'pow_n_steps': 0.02134422410015091}}
 
 

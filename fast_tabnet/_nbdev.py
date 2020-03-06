@@ -2,27 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"TabNet": "00_core.ipynb",
-         "TabNetModel": "00_core.ipynb",
-         "SparsemaxFunction": "01_sparsemax.ipynb",
-         "Sparsemax": "01_sparsemax.ipynb",
-         "Entmax15Function": "01_sparsemax.ipynb",
-         "Entmoid15": "01_sparsemax.ipynb",
-         "Entmax15": "01_sparsemax.ipynb",
-         "sparsemax": "01_sparsemax.ipynb",
-         "entmax15": "01_sparsemax.ipynb",
-         "entmoid15": "01_sparsemax.ipynb",
-         "initialize_non_glu": "02_tab_network.ipynb",
-         "initialize_glu": "02_tab_network.ipynb",
-         "GBN": "02_tab_network.ipynb",
-         "AttentiveTransformer": "02_tab_network.ipynb",
-         "FeatTransformer": "02_tab_network.ipynb",
-         "GLU_Block": "02_tab_network.ipynb",
-         "GLU_Layer": "02_tab_network.ipynb"}
+index = {"TabNetModel": "00_core.ipynb"}
 
-modules = ["core.py",
-           "sparsemax.py",
-           "tab_network.py"]
+modules = ["core.py"]
 
 doc_url = "https://mgrankin.github.io/fast_tabnet/"
 

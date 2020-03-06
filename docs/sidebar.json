@@ -1,7 +1,6 @@
 {
   "fast_tabnet": {
     "Overview": "/",
-    "TabNet functionality": "/core",
-    "Title": "/tab_network"
+    "TabNet functionality": "/core"
   }
 }
