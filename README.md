@@ -1,5 +1,5 @@
 # TabNet for fastai
-> This is an adaptation of TabNet (Attention-based network for tabular data) for fastai (>=2.0) library. The original paper https://arxiv.org/pdf/1908.07442.pdf. The implementation is from here https://github.com/dreamquark-ai/tabnet
+> This is an adaptation of TabNet (Attention-based network for tabular data) for fastai (>=2.0) library. The original paper https://arxiv.org/pdf/1908.07442.pdf. The implementation is taken from here https://github.com/dreamquark-ai/tabnet
 
 
 ## Install
@@ -48,11 +48,12 @@ from fast_tabnet.core import *
 path = untar_data(URLs.ADULT_SAMPLE)
 df = pd.read_csv(path/'adult.csv')
 df_main,df_test = df.iloc[:10000].copy(),df.iloc[10000:].copy()
-```
-
-```python
 df_main.head()
 ```
+
+
+
+
 
 
 
@@ -230,140 +231,140 @@ dbch.valid.show_batch()
     <tr>
       <th>0</th>
       <td>Private</td>
-      <td>Bachelors</td>
+      <td>5th-6th</td>
       <td>Never-married</td>
-      <td>Prof-specialty</td>
-      <td>Own-child</td>
+      <td>Handlers-cleaners</td>
+      <td>Other-relative</td>
       <td>White</td>
       <td>False</td>
-      <td>22.0</td>
-      <td>244366.000980</td>
-      <td>13.0</td>
+      <td>27.000000</td>
+      <td>150025.000146</td>
+      <td>3.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Private</td>
-      <td>Some-college</td>
-      <td>Divorced</td>
-      <td>Other-service</td>
-      <td>Not-in-family</td>
+      <td>Bachelors</td>
+      <td>Married-civ-spouse</td>
+      <td>Prof-specialty</td>
+      <td>Wife</td>
       <td>White</td>
       <td>False</td>
-      <td>49.0</td>
-      <td>28791.000012</td>
-      <td>10.0</td>
-      <td>&lt;50k</td>
+      <td>39.000000</td>
+      <td>327435.004950</td>
+      <td>13.0</td>
+      <td>&gt;=50k</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Private</td>
       <td>HS-grad</td>
       <td>Married-civ-spouse</td>
-      <td>Exec-managerial</td>
-      <td>Husband</td>
+      <td>Sales</td>
+      <td>Wife</td>
       <td>White</td>
       <td>False</td>
-      <td>40.0</td>
-      <td>445382.003158</td>
+      <td>44.000000</td>
+      <td>111502.003165</td>
       <td>9.0</td>
-      <td>&gt;=50k</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Private</td>
       <td>Assoc-voc</td>
-      <td>Married-civ-spouse</td>
-      <td>Adm-clerical</td>
-      <td>Wife</td>
-      <td>Black</td>
-      <td>False</td>
-      <td>37.0</td>
-      <td>177284.999380</td>
-      <td>11.0</td>
-      <td>&gt;=50k</td>
+      <td>Never-married</td>
+      <td>Prof-specialty</td>
+      <td>Not-in-family</td>
+      <td>White</td>
+      <td>True</td>
+      <td>30.000000</td>
+      <td>198183.000128</td>
+      <td>10.0</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Private</td>
-      <td>1st-4th</td>
-      <td>Married-civ-spouse</td>
-      <td>Transport-moving</td>
-      <td>Husband</td>
+      <td>?</td>
+      <td>7th-8th</td>
+      <td>Divorced</td>
+      <td>?</td>
+      <td>Not-in-family</td>
       <td>White</td>
-      <td>False</td>
-      <td>53.0</td>
-      <td>162380.999796</td>
-      <td>2.0</td>
+      <td>True</td>
+      <td>65.999999</td>
+      <td>270460.001937</td>
+      <td>10.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Private</td>
-      <td>HS-grad</td>
-      <td>Never-married</td>
-      <td>Adm-clerical</td>
-      <td>Not-in-family</td>
-      <td>White</td>
-      <td>False</td>
-      <td>26.0</td>
-      <td>176520.000300</td>
-      <td>9.0</td>
-      <td>&lt;50k</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>State-gov</td>
-      <td>HS-grad</td>
+      <td>Prof-school</td>
       <td>Married-civ-spouse</td>
-      <td>Exec-managerial</td>
+      <td>Sales</td>
       <td>Husband</td>
       <td>White</td>
       <td>False</td>
-      <td>23.0</td>
-      <td>142546.999468</td>
-      <td>9.0</td>
+      <td>47.000000</td>
+      <td>175957.999723</td>
+      <td>15.0</td>
+      <td>&gt;=50k</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Private</td>
+      <td>Assoc-voc</td>
+      <td>Married-civ-spouse</td>
+      <td>Prof-specialty</td>
+      <td>Husband</td>
+      <td>White</td>
+      <td>False</td>
+      <td>40.000000</td>
+      <td>119224.999863</td>
+      <td>11.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>7</th>
       <td>Private</td>
-      <td>Assoc-voc</td>
+      <td>HS-grad</td>
       <td>Never-married</td>
-      <td>Adm-clerical</td>
-      <td>Not-in-family</td>
+      <td>Other-service</td>
+      <td>Own-child</td>
       <td>White</td>
       <td>False</td>
-      <td>30.0</td>
-      <td>141117.999250</td>
-      <td>11.0</td>
+      <td>21.000000</td>
+      <td>249727.002866</td>
+      <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>?</td>
-      <td>Bachelors</td>
-      <td>Never-married</td>
-      <td>?</td>
-      <td>Own-child</td>
-      <td>Black</td>
+      <td>Self-emp-not-inc</td>
+      <td>Assoc-acdm</td>
+      <td>Married-civ-spouse</td>
+      <td>Craft-repair</td>
+      <td>Husband</td>
+      <td>White</td>
       <td>False</td>
-      <td>28.0</td>
-      <td>55949.999304</td>
-      <td>13.0</td>
+      <td>47.000000</td>
+      <td>107230.997489</td>
+      <td>12.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Private</td>
       <td>HS-grad</td>
-      <td>Married-civ-spouse</td>
-      <td>Craft-repair</td>
-      <td>Husband</td>
-      <td>White</td>
+      <td>Never-married</td>
+      <td>Handlers-cleaners</td>
+      <td>Own-child</td>
+      <td>Amer-Indian-Eskimo</td>
       <td>False</td>
-      <td>65.0</td>
-      <td>192132.999984</td>
+      <td>20.000001</td>
+      <td>27337.000096</td>
       <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
@@ -421,9 +422,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>2</td>
       <td>1</td>
-      <td>0.469354</td>
-      <td>1.334846</td>
-      <td>1.159394</td>
+      <td>0.457196</td>
+      <td>1.348643</td>
+      <td>1.183973</td>
       <td>0</td>
     </tr>
     <tr>
@@ -435,9 +436,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>4</td>
       <td>1</td>
-      <td>-0.927560</td>
-      <td>1.248194</td>
-      <td>-0.426780</td>
+      <td>-0.936750</td>
+      <td>1.260802</td>
+      <td>-0.427149</td>
       <td>0</td>
     </tr>
     <tr>
@@ -449,9 +450,9 @@ to_tst.all_cols.head()
       <td>2</td>
       <td>5</td>
       <td>1</td>
-      <td>1.057528</td>
-      <td>0.150221</td>
-      <td>-1.219867</td>
+      <td>1.044121</td>
+      <td>0.147752</td>
+      <td>-1.232709</td>
       <td>0</td>
     </tr>
     <tr>
@@ -463,9 +464,9 @@ to_tst.all_cols.head()
       <td>5</td>
       <td>5</td>
       <td>1</td>
-      <td>0.542875</td>
-      <td>-0.281036</td>
-      <td>-0.426780</td>
+      <td>0.530562</td>
+      <td>-0.289427</td>
+      <td>-0.427149</td>
       <td>0</td>
     </tr>
     <tr>
@@ -477,9 +478,9 @@ to_tst.all_cols.head()
       <td>1</td>
       <td>5</td>
       <td>1</td>
-      <td>0.763441</td>
-      <td>1.436943</td>
-      <td>0.366307</td>
+      <td>0.750659</td>
+      <td>1.452142</td>
+      <td>0.378412</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -517,12 +518,12 @@ learn.lr_find()
 
 
 
-    (0.2290867567062378, 2.5118865210060903e-07)
+    SuggestedLRs(lr_min=0.33113112449646, lr_steep=7.585775847473997e-07)
 
 
 
 
-![png](docs/images/output_20_2.png)
+![png](docs/images/output_19_2.png)
 
 
 ```python
@@ -543,73 +544,73 @@ learn.fit_one_cycle(10)
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.170135</td>
-      <td>0.146895</td>
-      <td>0.763000</td>
+      <td>0.216066</td>
+      <td>0.171518</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>0.137417</td>
-      <td>0.132686</td>
-      <td>0.763000</td>
+      <td>0.146902</td>
+      <td>0.130240</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>0.135086</td>
-      <td>0.125255</td>
-      <td>0.763000</td>
+      <td>0.133306</td>
+      <td>0.122532</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>0.130153</td>
-      <td>0.123437</td>
-      <td>0.763000</td>
+      <td>0.129681</td>
+      <td>0.118359</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>0.126129</td>
-      <td>0.122279</td>
-      <td>0.763000</td>
+      <td>0.127575</td>
+      <td>0.117743</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>0.124050</td>
-      <td>0.122519</td>
-      <td>0.763000</td>
+      <td>0.126002</td>
+      <td>0.116654</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>0.122126</td>
-      <td>0.122373</td>
-      <td>0.763000</td>
+      <td>0.123125</td>
+      <td>0.113976</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>0.120248</td>
-      <td>0.120394</td>
-      <td>0.763000</td>
+      <td>0.118564</td>
+      <td>0.113369</td>
+      <td>0.754000</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>0.117466</td>
-      <td>0.118759</td>
-      <td>0.763000</td>
-      <td>00:02</td>
+      <td>0.118185</td>
+      <td>0.111743</td>
+      <td>0.754000</td>
+      <td>00:03</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>0.115755</td>
-      <td>0.118642</td>
-      <td>0.763000</td>
-      <td>00:02</td>
+      <td>0.115925</td>
+      <td>0.112126</td>
+      <td>0.754000</td>
+      <td>00:03</td>
     </tr>
   </tbody>
 </table>
@@ -666,13 +667,3 @@ optimizer.maximize(
 ```python
 optimizer.max
 ```
-
-
-
-
-    {'target': -0.11643998324871063,
-     'params': {'pow_n_a': 3.063993501843213,
-      'pow_n_d': 4.3649224287800035,
-      'pow_n_steps': 0.02134422410015091}}
-
-
