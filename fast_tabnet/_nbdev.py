@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"TabNetModel": "00_core.ipynb"}
+index = {"TabNetModel": "00_core.ipynb",
+         "nn.Module.size": "00_core.ipynb"}
 
 modules = ["core.py"]
 

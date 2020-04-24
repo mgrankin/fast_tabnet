@@ -12,7 +12,7 @@ class TabNetModel(Module):
     "Attention model for tabular data."
     def __init__(self, emb_szs, n_cont, out_sz, embed_p=0., y_range=None,
                  n_d=8, n_a=8,
-                 n_steps=3, gamma=1.3,
+                 n_steps=3, gamma=1.5,
                  n_independent=2, n_shared=2, epsilon=1e-15,
                  virtual_batch_size=128, momentum=0.02):
         self.embeds = nn.ModuleList([Embedding(ni, nf) for ni,nf in emb_szs])
@@ -35,3 +35,8 @@ class TabNetModel(Module):
         if self.y_range is not None:
             x = (self.y_range[1]-self.y_range[0]) * torch.sigmoid(x) + self.y_range[0]
         return x
+
+# Internal Cell
+@patch
+def size(x:nn.Module, with_grad: bool=True) -> Int:
+    return sum(p.numel() for p in x.parameters() if p.requires_grad or not with_grad)

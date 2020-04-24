@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: TabNet functionality
       url: /core
+    - output: web,pdf
+      title: Title
+      url: /examples
     output: web
     title: fast_tabnet
   output: web
