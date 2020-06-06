@@ -31,7 +31,7 @@ class TabNetModel(Module):
         if self.n_cont != 0:
             x_cont = self.bn_cont(x_cont)
             x = torch.cat([x, x_cont], 1) if self.n_emb != 0 else x_cont
-        x, _, _, _ = self.tab_net(x)
+        x, _ = self.tab_net(x)
         if self.y_range is not None:
             x = (self.y_range[1]-self.y_range[0]) * torch.sigmoid(x) + self.y_range[0]
         return x
