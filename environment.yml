@@ -15,7 +15,7 @@ dependencies:
   - bayesian-optimization
   - pip:
     - pytorch-tabnet>=1.1
-    - fastai2
+    - fastai
     - nbdev
     - twine
     - wget
