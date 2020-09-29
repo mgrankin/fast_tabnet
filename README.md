@@ -38,13 +38,13 @@ Parameters `emb_szs, n_cont, out_sz, embed_p, y_range` are the same as for fasta
 
 Below is an example from fastai library, but the model in use is TabNet
 
-```python
-from fastai2.basics import *
-from fastai2.tabular.all import *
+```
+from fastai.basics import *
+from fastai.tabular.all import *
 from fast_tabnet.core import *
 ```
 
-```python
+```
 path = untar_data(URLs.ADULT_SAMPLE)
 df = pd.read_csv(path/'adult.csv')
 df_main,df_test = df.iloc[:-1000].copy(),df.iloc[-1000:].copy()
@@ -186,7 +186,7 @@ df_main.head()
 
 
 
-```python
+```
 cat_names = ['workclass', 'education', 'marital-status', 'occupation', 
              'relationship', 'race', 'native-country', 'sex']
 cont_names = ['age', 'fnlwgt', 'education-num']
@@ -194,15 +194,15 @@ procs = [Categorify, FillMissing, Normalize]
 splits = RandomSplitter()(range_of(df_main))
 ```
 
-```python
+```
 to = TabularPandas(df_main, procs, cat_names, cont_names, y_names="salary", y_block = CategoryBlock(), splits=splits)
 ```
 
-```python
+```
 dls = to.dataloaders()
 ```
 
-```python
+```
 dls.valid.show_batch()
 ```
 
@@ -391,7 +391,7 @@ dls.valid.show_batch()
 </table>
 
 
-```python
+```
 to_tst = to.new(df_test)
 to_tst.process()
 to_tst.all_cols.head()
@@ -520,7 +520,7 @@ to_tst.all_cols.head()
 
 
 
-```python
+```
 emb_szs = get_emb_sz(to); print(emb_szs)
 ```
 
@@ -529,16 +529,16 @@ emb_szs = get_emb_sz(to); print(emb_szs)
 
 That's the use of the model
 
-```python
+```
 model = TabNetModel(emb_szs, len(to.cont_names), dls.c, n_d=8, n_a=32, n_steps=1); 
 ```
 
-```python
+```
 opt_func = partial(Adam, wd=0.01, eps=1e-5)
 learn = Learner(dls, model, CrossEntropyLossFlat(), opt_func=opt_func, lr=3e-2, metrics=[accuracy])
 ```
 
-```python
+```
 learn.lr_find()
 ```
 
@@ -557,7 +557,7 @@ learn.lr_find()
 ![png](docs/images/output_19_2.png)
 
 
-```python
+```
 learn.fit_one_cycle(10)
 ```
 
@@ -654,11 +654,11 @@ If your dataset isn't huge you can tune hyperparameters for tabular models with 
 
 You may need to install the optimizer `pip install bayesian-optimization`
 
-```python
+```
 from functools import lru_cache
 ```
 
-```python
+```
 # The function we'll optimize
 @lru_cache(1000)
 def get_accuracy(n_d:Int, n_a:Int, n_steps:Int):
@@ -670,13 +670,13 @@ def get_accuracy(n_d:Int, n_a:Int, n_steps:Int):
 
 This implementation of Bayesian Optimization doesn't work naturally with descreet values. That's why we use wrapper with `lru_cache`.
 
-```python
+```
 def fit_accuracy(pow_n_d, pow_n_a, pow_n_steps):
     n_d, n_a, n_steps = map(lambda x: 2**int(x), (pow_n_d, pow_n_a, pow_n_steps))
     return get_accuracy(n_d, n_a, n_steps)
 ```
 
-```python
+```
 from bayes_opt import BayesianOptimization
 
 # Bounded region of parameter space
@@ -688,7 +688,7 @@ optimizer = BayesianOptimization(
 )
 ```
 
-```python
+```
 optimizer.maximize(
     init_points=15,
     n_iter=100,
@@ -6800,7 +6800,7 @@ optimizer.maximize(
     =============================================================
 
 
-```python
+```
 optimizer.max['target']
 ```
 
@@ -6811,7 +6811,7 @@ optimizer.max['target']
 
 
 
-```python
+```
 {key: 2**int(value)
   for key, value in optimizer.max['params'].items()}
 ```
@@ -6828,23 +6828,23 @@ optimizer.max['target']
 
 If your dataset is so big it doesn't fit in memory, you can load a chunk of it each epoch.
 
-```python
+```
 df = pd.read_csv(path/'adult.csv')
 df_main,df_valid = df.iloc[:-1000].copy(),df.iloc[-1000:].copy()
 ```
 
-```python
+```
 # choose size that fit in memory
 dataset_size = 1000
 ```
 
-```python
+```
 # load chunk with your own code
 def load_chunk():
     return df_main.sample(dataset_size).copy()
 ```
 
-```python
+```
 df_small = load_chunk()
 cat_names = ['workclass', 'education', 'marital-status', 'occupation', 
              'relationship', 'race', 'native-country', 'sex']
@@ -6853,19 +6853,19 @@ procs = [Categorify, FillMissing, Normalize]
 splits = RandomSplitter()(range_of(df_small))
 ```
 
-```python
+```
 to = TabularPandas(df_small, procs, cat_names, cont_names, y_names="salary", y_block = CategoryBlock(), 
                    splits=None, do_setup=True)
 ```
 
-```python
+```
 # save the validation set
 to_valid = to.new(df_valid)
 to_valid.process()
 val_dl = TabDataLoader(to_valid.train)
 ```
 
-```python
+```
 len(to.train)
 ```
 
@@ -6876,7 +6876,7 @@ len(to.train)
 
 
 
-```python
+```
 class ReloadCallback(Callback):
     def begin_epoch(self): 
         df_small = load_chunk()
@@ -6886,19 +6886,19 @@ class ReloadCallback(Callback):
         self.learn.dls = DataLoaders(trn_dl, val_dl).cuda()
 ```
 
-```python
+```
 dls = to.dataloaders()
 emb_szs = get_emb_sz(to)
 model = TabNetModel(emb_szs, len(to.cont_names), dls.c, n_d=8, n_a=32, n_steps=1); 
 ```
 
-```python
+```
 opt_func = partial(Adam, wd=0.01, eps=1e-5)
 learn = Learner(dls, model, CrossEntropyLossFlat(), opt_func=opt_func, lr=3e-2, metrics=[accuracy])
 learn.add_cb(ReloadCallback());
 ```
 
-```python
+```
 learn.fit_one_cycle(10)
 ```
 

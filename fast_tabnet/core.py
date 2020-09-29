@@ -3,8 +3,8 @@
 __all__ = ['TabNetModel']
 
 # Cell
-from fastai2.basics import *
-from fastai2.tabular.all import *
+from fastai.basics import *
+from fastai.tabular.all import *
 from pytorch_tabnet.tab_network import TabNetNoEmbeddings
 
 # Cell
