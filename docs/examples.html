@@ -19,23 +19,18 @@ description: "summary"
 -->
 
 <div class="container" id="notebook-container">
-        
     {% raw %}
-    
+        
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai2.basics</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.tabular.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.basics</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.tabular.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">fast_tabnet.core</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">wget</span><span class="o">,</span> <span class="nn">gzip</span><span class="o">,</span> <span class="nn">shutil</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -46,16 +41,12 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Forest-Cover-Type-dataset">Forest Cover Type dataset<a class="anchor-link" href="#Forest-Cover-Type-dataset"> </a></h1>
 </div>
 </div>
 </div>
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -69,10 +60,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -87,10 +74,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -106,10 +89,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -146,10 +125,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -344,10 +319,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -362,10 +333,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -380,10 +347,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -407,7 +370,7 @@ description: "summary"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>522348</pre>
+<pre>522632</pre>
 </div>
 
 </div>
@@ -416,70 +379,12 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">lr_find</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-
-</div>
-
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>SuggestedLRs(lr_min=0.2754228591918945, lr_steep=0.0063095735386013985)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -506,703 +411,50 @@ description: "summary"
   <tbody>
     <tr>
       <td>0</td>
-      <td>2.256847</td>
-      <td>1.502823</td>
-      <td>0.495146</td>
-      <td>00:16</td>
+      <td>1.811294</td>
+      <td>1.122082</td>
+      <td>0.495559</td>
+      <td>00:15</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>1.714538</td>
-      <td>1.232591</td>
-      <td>0.499484</td>
-      <td>00:16</td>
+      <td>1.338118</td>
+      <td>1.141737</td>
+      <td>0.496764</td>
+      <td>01:06</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>1.437834</td>
-      <td>1.109687</td>
-      <td>0.531635</td>
-      <td>00:16</td>
+      <td>1.019847</td>
+      <td>0.825664</td>
+      <td>0.642892</td>
+      <td>00:14</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>1.238540</td>
-      <td>0.940593</td>
-      <td>0.615215</td>
-      <td>00:19</td>
+      <td>0.846037</td>
+      <td>0.770947</td>
+      <td>0.665749</td>
+      <td>01:14</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>1.050501</td>
-      <td>0.801974</td>
-      <td>0.652427</td>
-      <td>00:19</td>
+      <td>0.753763</td>
+      <td>0.780882</td>
+      <td>0.659071</td>
+      <td>01:07</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>0.924480</td>
-      <td>0.768550</td>
-      <td>0.663855</td>
-      <td>00:19</td>
+      <td>0.705925</td>
+      <td>0.757736</td>
+      <td>0.670396</td>
+      <td>00:16</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>0.851805</td>
-      <td>0.751569</td>
-      <td>0.673976</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>0.806640</td>
-      <td>0.730970</td>
-      <td>0.683374</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>0.773319</td>
-      <td>0.716243</td>
-      <td>0.686196</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>0.750163</td>
-      <td>0.709107</td>
-      <td>0.690740</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>0.735232</td>
-      <td>0.703869</td>
-      <td>0.693597</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>0.722736</td>
-      <td>0.700182</td>
-      <td>0.694286</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>0.713092</td>
-      <td>0.690553</td>
-      <td>0.700723</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>0.705186</td>
-      <td>0.682773</td>
-      <td>0.700792</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>0.698412</td>
-      <td>0.678252</td>
-      <td>0.699552</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>0.691287</td>
-      <td>0.667807</td>
-      <td>0.706334</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>0.686024</td>
-      <td>0.674505</td>
-      <td>0.703890</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>0.680334</td>
-      <td>0.657260</td>
-      <td>0.713356</td>
-      <td>00:17</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>0.672880</td>
-      <td>0.649117</td>
-      <td>0.717177</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>0.662698</td>
-      <td>0.634960</td>
-      <td>0.723373</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>0.654407</td>
-      <td>0.636433</td>
-      <td>0.727332</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>21</td>
-      <td>0.649264</td>
-      <td>0.632824</td>
-      <td>0.725783</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>22</td>
-      <td>0.640805</td>
-      <td>0.608870</td>
-      <td>0.737487</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>23</td>
-      <td>0.629050</td>
-      <td>0.592882</td>
-      <td>0.746162</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>24</td>
-      <td>0.641061</td>
-      <td>0.771173</td>
-      <td>0.663373</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>0.682703</td>
-      <td>0.695056</td>
-      <td>0.687091</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>26</td>
-      <td>0.681716</td>
-      <td>0.664379</td>
-      <td>0.702513</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>27</td>
-      <td>0.668070</td>
-      <td>0.635529</td>
-      <td>0.720792</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>28</td>
-      <td>0.650184</td>
-      <td>0.612765</td>
-      <td>0.729260</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>29</td>
-      <td>0.631789</td>
-      <td>0.594574</td>
-      <td>0.739793</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>30</td>
-      <td>0.613148</td>
-      <td>0.571319</td>
-      <td>0.752943</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>31</td>
-      <td>0.592041</td>
-      <td>0.544487</td>
-      <td>0.770465</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>32</td>
-      <td>0.571339</td>
-      <td>0.518939</td>
-      <td>0.782272</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>33</td>
-      <td>0.549749</td>
-      <td>0.507405</td>
-      <td>0.787952</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>34</td>
-      <td>0.529998</td>
-      <td>0.489515</td>
-      <td>0.796110</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>35</td>
-      <td>0.510245</td>
-      <td>0.458060</td>
-      <td>0.811463</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>36</td>
-      <td>0.490811</td>
-      <td>0.436288</td>
-      <td>0.820103</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>37</td>
-      <td>0.468046</td>
-      <td>0.411029</td>
-      <td>0.830052</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>38</td>
-      <td>0.449305</td>
-      <td>0.401817</td>
-      <td>0.836627</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>39</td>
-      <td>0.430322</td>
-      <td>0.371944</td>
-      <td>0.848124</td>
-      <td>00:17</td>
-    </tr>
-    <tr>
-      <td>40</td>
-      <td>0.413502</td>
-      <td>0.361152</td>
-      <td>0.853804</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>41</td>
-      <td>0.396513</td>
-      <td>0.340741</td>
-      <td>0.859002</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>42</td>
-      <td>0.380093</td>
-      <td>0.327560</td>
-      <td>0.866506</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>43</td>
-      <td>0.363484</td>
-      <td>0.312903</td>
-      <td>0.872427</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>44</td>
-      <td>0.351364</td>
-      <td>0.315257</td>
-      <td>0.870086</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>45</td>
-      <td>0.340740</td>
-      <td>0.294426</td>
-      <td>0.879174</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>46</td>
-      <td>0.326139</td>
-      <td>0.280168</td>
-      <td>0.885026</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>47</td>
-      <td>0.315983</td>
-      <td>0.277401</td>
-      <td>0.890878</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>48</td>
-      <td>0.306926</td>
-      <td>0.269012</td>
-      <td>0.889983</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>49</td>
-      <td>0.298778</td>
-      <td>0.259070</td>
-      <td>0.896248</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>50</td>
-      <td>0.289632</td>
-      <td>0.254215</td>
-      <td>0.898038</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>51</td>
-      <td>0.279499</td>
-      <td>0.249136</td>
-      <td>0.898933</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>52</td>
-      <td>0.271402</td>
-      <td>0.231439</td>
-      <td>0.905783</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>53</td>
-      <td>0.262643</td>
-      <td>0.219902</td>
-      <td>0.911429</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>54</td>
-      <td>0.254665</td>
-      <td>0.222392</td>
-      <td>0.909122</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>55</td>
-      <td>0.245974</td>
-      <td>0.206187</td>
-      <td>0.916799</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>56</td>
-      <td>0.238970</td>
-      <td>0.203288</td>
-      <td>0.917005</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>57</td>
-      <td>0.231877</td>
-      <td>0.200275</td>
-      <td>0.919139</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>58</td>
-      <td>0.225295</td>
-      <td>0.195344</td>
-      <td>0.921515</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>59</td>
-      <td>0.220759</td>
-      <td>0.187205</td>
-      <td>0.923821</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>60</td>
-      <td>0.213519</td>
-      <td>0.183953</td>
-      <td>0.926885</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>61</td>
-      <td>0.208013</td>
-      <td>0.176375</td>
-      <td>0.927608</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>62</td>
-      <td>0.204080</td>
-      <td>0.179136</td>
-      <td>0.926781</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>63</td>
-      <td>0.199581</td>
-      <td>0.168458</td>
-      <td>0.932324</td>
-      <td>00:17</td>
-    </tr>
-    <tr>
-      <td>64</td>
-      <td>0.194900</td>
-      <td>0.165125</td>
-      <td>0.933873</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>65</td>
-      <td>0.187817</td>
-      <td>0.158514</td>
-      <td>0.936764</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>66</td>
-      <td>0.182110</td>
-      <td>0.152891</td>
-      <td>0.937694</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>67</td>
-      <td>0.177616</td>
-      <td>0.155726</td>
-      <td>0.937866</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>68</td>
-      <td>0.173218</td>
-      <td>0.143457</td>
-      <td>0.942065</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>69</td>
-      <td>0.169593</td>
-      <td>0.145230</td>
-      <td>0.941033</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>70</td>
-      <td>0.165981</td>
-      <td>0.142562</td>
-      <td>0.942444</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>71</td>
-      <td>0.162787</td>
-      <td>0.138825</td>
-      <td>0.943029</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>72</td>
-      <td>0.158510</td>
-      <td>0.137395</td>
-      <td>0.944406</td>
-      <td>00:16</td>
-    </tr>
-    <tr>
-      <td>73</td>
-      <td>0.155134</td>
-      <td>0.130399</td>
-      <td>0.947539</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>74</td>
-      <td>0.150513</td>
-      <td>0.126741</td>
-      <td>0.948606</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>75</td>
-      <td>0.146524</td>
-      <td>0.124266</td>
-      <td>0.949914</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>76</td>
-      <td>0.143474</td>
-      <td>0.124839</td>
-      <td>0.950361</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>77</td>
-      <td>0.141042</td>
-      <td>0.123499</td>
-      <td>0.949776</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>78</td>
-      <td>0.137728</td>
-      <td>0.117249</td>
-      <td>0.952530</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>79</td>
-      <td>0.134815</td>
-      <td>0.113910</td>
-      <td>0.954458</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>80</td>
-      <td>0.132084</td>
-      <td>0.114102</td>
-      <td>0.953907</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>81</td>
-      <td>0.129097</td>
-      <td>0.112096</td>
-      <td>0.954699</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>82</td>
-      <td>0.126686</td>
-      <td>0.111627</td>
-      <td>0.955250</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>83</td>
-      <td>0.124879</td>
-      <td>0.108335</td>
-      <td>0.957590</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>84</td>
-      <td>0.122251</td>
-      <td>0.105511</td>
-      <td>0.957556</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>85</td>
-      <td>0.119451</td>
-      <td>0.104896</td>
-      <td>0.958003</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>86</td>
-      <td>0.117425</td>
-      <td>0.103415</td>
-      <td>0.959243</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>87</td>
-      <td>0.115833</td>
-      <td>0.100942</td>
-      <td>0.960757</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>88</td>
-      <td>0.113660</td>
-      <td>0.100417</td>
-      <td>0.960241</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>89</td>
-      <td>0.111997</td>
-      <td>0.098506</td>
-      <td>0.960964</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>90</td>
-      <td>0.110095</td>
-      <td>0.098613</td>
-      <td>0.960654</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>91</td>
-      <td>0.108528</td>
-      <td>0.097642</td>
-      <td>0.960241</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>92</td>
-      <td>0.107394</td>
-      <td>0.097146</td>
-      <td>0.960929</td>
-      <td>00:19</td>
-    </tr>
-    <tr>
-      <td>93</td>
-      <td>0.106603</td>
-      <td>0.095982</td>
-      <td>0.961893</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>94</td>
-      <td>0.105503</td>
-      <td>0.095597</td>
-      <td>0.962375</td>
-      <td>00:20</td>
-    </tr>
-    <tr>
-      <td>95</td>
-      <td>0.104573</td>
-      <td>0.095370</td>
-      <td>0.962444</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>96</td>
-      <td>0.103905</td>
-      <td>0.095202</td>
-      <td>0.962203</td>
-      <td>00:17</td>
-    </tr>
-    <tr>
-      <td>97</td>
-      <td>0.103627</td>
-      <td>0.095260</td>
-      <td>0.962754</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>98</td>
-      <td>0.103108</td>
-      <td>0.095259</td>
-      <td>0.962547</td>
-      <td>00:18</td>
-    </tr>
-    <tr>
-      <td>99</td>
-      <td>0.102782</td>
-      <td>0.094696</td>
-      <td>0.962857</td>
-      <td>00:17</td>
+      <td>0.687604</td>
+      <td>00:46</td>
     </tr>
   </tbody>
 </table>
@@ -1210,12 +462,140 @@ description: "summary"
 
 </div>
 
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-12-184a41e6b7e2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>learn<span class="ansi-blue-fg">.</span>fit_one_cycle<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastcore/logargs.py</span> in <span class="ansi-cyan-fg">_f</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>         init_args<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>log<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     55</span>         setattr<span class="ansi-blue-fg">(</span>inst<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;init_args&#39;</span><span class="ansi-blue-fg">,</span> init_args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> inst <span class="ansi-green-fg">if</span> to_return <span class="ansi-green-fg">else</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">return</span> _f
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/callback/schedule.py</span> in <span class="ansi-cyan-fg">fit_one_cycle</span><span class="ansi-blue-fg">(self, n_epoch, lr_max, div, div_final, pct_start, wd, moms, cbs, reset_opt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    111</span>     scheds = {&#39;lr&#39;: combined_cos(pct_start, lr_max/div, lr_max, lr_max/div_final),
+<span class="ansi-green-intense-fg ansi-bold">    112</span>               &#39;mom&#39;: combined_cos(pct_start, *(self.moms if moms is None else moms))}
+<span class="ansi-green-fg">--&gt; 113</span><span class="ansi-red-fg">     </span>self<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>n_epoch<span class="ansi-blue-fg">,</span> cbs<span class="ansi-blue-fg">=</span>ParamScheduler<span class="ansi-blue-fg">(</span>scheds<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">+</span>L<span class="ansi-blue-fg">(</span>cbs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> reset_opt<span class="ansi-blue-fg">=</span>reset_opt<span class="ansi-blue-fg">,</span> wd<span class="ansi-blue-fg">=</span>wd<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    114</span> 
+<span class="ansi-green-intense-fg ansi-bold">    115</span> <span class="ansi-red-fg"># Cell</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastcore/logargs.py</span> in <span class="ansi-cyan-fg">_f</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>         init_args<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>log<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     55</span>         setattr<span class="ansi-blue-fg">(</span>inst<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;init_args&#39;</span><span class="ansi-blue-fg">,</span> init_args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> inst <span class="ansi-green-fg">if</span> to_return <span class="ansi-green-fg">else</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">return</span> _f
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">fit</span><span class="ansi-blue-fg">(self, n_epoch, lr, wd, cbs, reset_opt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    205</span>             self<span class="ansi-blue-fg">.</span>opt<span class="ansi-blue-fg">.</span>set_hypers<span class="ansi-blue-fg">(</span>lr<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>lr <span class="ansi-green-fg">if</span> lr <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">else</span> lr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>             self<span class="ansi-blue-fg">.</span>n_epoch <span class="ansi-blue-fg">=</span> n_epoch
+<span class="ansi-green-fg">--&gt; 207</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_fit<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;fit&#39;</span><span class="ansi-blue-fg">,</span> CancelFitException<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_end_cleanup<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    208</span> 
+<span class="ansi-green-intense-fg ansi-bold">    209</span>     <span class="ansi-green-fg">def</span> _end_cleanup<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>xb<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>yb<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>pred<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>loss <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">(</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">(</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
+<span class="ansi-green-intense-fg ansi-bold">    153</span> 
+<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_fit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    195</span>         <span class="ansi-green-fg">for</span> epoch <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>n_epoch<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    196</span>             self<span class="ansi-blue-fg">.</span>epoch<span class="ansi-blue-fg">=</span>epoch
+<span class="ansi-green-fg">--&gt; 197</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_epoch<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;epoch&#39;</span><span class="ansi-blue-fg">,</span> CancelEpochException<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    198</span> 
+<span class="ansi-green-intense-fg ansi-bold">    199</span>     <span class="ansi-blue-fg">@</span>log_args<span class="ansi-blue-fg">(</span>but<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;cbs&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
+<span class="ansi-green-intense-fg ansi-bold">    153</span> 
+<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_epoch</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    189</span> 
+<span class="ansi-green-intense-fg ansi-bold">    190</span>     <span class="ansi-green-fg">def</span> _do_epoch<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 191</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_do_epoch_train<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    192</span>         self<span class="ansi-blue-fg">.</span>_do_epoch_validate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    193</span> 
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_epoch_train</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">def</span> _do_epoch_train<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    182</span>         self<span class="ansi-blue-fg">.</span>dl <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>dls<span class="ansi-blue-fg">.</span>train
+<span class="ansi-green-fg">--&gt; 183</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>all_batches<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;train&#39;</span><span class="ansi-blue-fg">,</span> CancelTrainException<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    184</span> 
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-green-fg">def</span> _do_epoch_validate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> ds_idx<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> dl<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
+<span class="ansi-green-intense-fg ansi-bold">    153</span> 
+<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">all_batches</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    159</span>     <span class="ansi-green-fg">def</span> all_batches<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    160</span>         self<span class="ansi-blue-fg">.</span>n_iter <span class="ansi-blue-fg">=</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 161</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">for</span> o <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>one_batch<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>o<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    162</span> 
+<span class="ansi-green-intense-fg ansi-bold">    163</span>     <span class="ansi-green-fg">def</span> _do_one_batch<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">one_batch</span><span class="ansi-blue-fg">(self, i, b)</span>
+<span class="ansi-green-intense-fg ansi-bold">    177</span>         self<span class="ansi-blue-fg">.</span>iter <span class="ansi-blue-fg">=</span> i
+<span class="ansi-green-intense-fg ansi-bold">    178</span>         self<span class="ansi-blue-fg">.</span>_split<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 179</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_one_batch<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;batch&#39;</span><span class="ansi-blue-fg">,</span> CancelBatchException<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    180</span> 
+<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">def</span> _do_epoch_train<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
+<span class="ansi-green-intense-fg ansi-bold">    153</span> 
+<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_one_batch</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>training <span class="ansi-green-fg">or</span> <span class="ansi-green-fg">not</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>yb<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">return</span>
+<span class="ansi-green-intense-fg ansi-bold">    169</span>         self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;before_backward&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 170</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_backward<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>         self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;after_backward&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    172</span>         self<span class="ansi-blue-fg">.</span>_step<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_backward</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    150</span> 
+<span class="ansi-green-intense-fg ansi-bold">    151</span>     <span class="ansi-green-fg">def</span> _step<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>opt<span class="ansi-blue-fg">.</span>step<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 152</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">def</span> _backward<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>loss<span class="ansi-blue-fg">.</span>backward<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    153</span> 
+<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/torch/tensor.py</span> in <span class="ansi-cyan-fg">backward</span><span class="ansi-blue-fg">(self, gradient, retain_graph, create_graph)</span>
+<span class="ansi-green-intense-fg ansi-bold">    183</span>                 products<span class="ansi-blue-fg">.</span> Defaults to<span class="ansi-red-fg"> </span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span><span class="ansi-green-fg">False</span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span><span class="ansi-blue-fg">.</span>
+<span class="ansi-green-intense-fg ansi-bold">    184</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 185</span><span class="ansi-red-fg">         </span>torch<span class="ansi-blue-fg">.</span>autograd<span class="ansi-blue-fg">.</span>backward<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> gradient<span class="ansi-blue-fg">,</span> retain_graph<span class="ansi-blue-fg">,</span> create_graph<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span> 
+<span class="ansi-green-intense-fg ansi-bold">    187</span>     <span class="ansi-green-fg">def</span> register_hook<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> hook<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/torch/autograd/__init__.py</span> in <span class="ansi-cyan-fg">backward</span><span class="ansi-blue-fg">(tensors, grad_tensors, retain_graph, create_graph, grad_variables)</span>
+<span class="ansi-green-intense-fg ansi-bold">    125</span>     Variable._execution_engine.run_backward(
+<span class="ansi-green-intense-fg ansi-bold">    126</span>         tensors<span class="ansi-blue-fg">,</span> grad_tensors<span class="ansi-blue-fg">,</span> retain_graph<span class="ansi-blue-fg">,</span> create_graph<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">--&gt; 127</span><span class="ansi-red-fg">         allow_unreachable=True)  # allow_unreachable flag
+</span><span class="ansi-green-intense-fg ansi-bold">    128</span> 
+<span class="ansi-green-intense-fg ansi-bold">    129</span> 
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
 </div>
 </div>
 
 </div>
-    {% endraw %}
+</div>
 
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Poker-hand">Poker hand<a class="anchor-link" href="#Poker-hand"> </a></h1>
@@ -1229,8 +609,6 @@ description: "summary"
 </div>
 </div>
 </div>
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1244,10 +622,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1381,10 +755,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1400,10 +770,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1418,10 +784,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1436,10 +798,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1454,10 +812,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1472,10 +826,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -1526,10 +876,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8570,8 +7916,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Sarcos-Robotics-Arm-Inverse-Dynamics">Sarcos Robotics Arm Inverse Dynamics<a class="anchor-link" href="#Sarcos-Robotics-Arm-Inverse-Dynamics"> </a></h1>
@@ -8585,8 +7929,6 @@ description: "summary"
 </div>
 </div>
 </div>
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8600,10 +7942,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8617,10 +7955,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8651,10 +7985,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8668,10 +7998,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8866,10 +8192,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8884,10 +8206,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8904,10 +8222,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8921,10 +8235,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -8957,10 +8267,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -9011,10 +8317,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10254,10 +9556,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10271,10 +9569,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10313,16 +9607,12 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Higgs-Boson">Higgs Boson<a class="anchor-link" href="#Higgs-Boson"> </a></h1>
 </div>
 </div>
 </div>
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10336,10 +9626,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10354,10 +9640,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10373,10 +9655,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10395,10 +9673,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10593,10 +9867,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10610,10 +9880,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10627,10 +9893,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10644,10 +9906,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10661,10 +9919,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10679,10 +9933,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10696,10 +9946,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10732,10 +9978,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10786,10 +10028,6 @@ description: "summary"
 </div>
 
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -10901,7 +10139,6 @@ description: "summary"
 
 </div>
     {% endraw %}
-
 </div>
  
 
