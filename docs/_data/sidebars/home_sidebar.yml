@@ -13,7 +13,7 @@ entries:
       title: TabNet functionality
       url: core.html
     - output: web,pdf
-      title: Title
+      title: Forest Cover Type dataset
       url: examples.html
     output: web
     title: fast_tabnet
