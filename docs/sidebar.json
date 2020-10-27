@@ -1,7 +1,7 @@
 {
   "fast_tabnet": {
     "Overview": "/",
-    "TabNet functionality": "/core",
-    "Title": "/examples"
+    "TabNet functionality": "core.html",
+    "Title": "examples.html"
   }
 }

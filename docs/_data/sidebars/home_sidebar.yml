@@ -11,10 +11,10 @@ entries:
       url: /
     - output: web,pdf
       title: TabNet functionality
-      url: /core
+      url: core.html
     - output: web,pdf
       title: Title
-      url: /examples
+      url: examples.html
     output: web
     title: fast_tabnet
   output: web
