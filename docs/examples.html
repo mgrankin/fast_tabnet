@@ -448,185 +448,78 @@ nb_path: "01_examples.ipynb"
   <tbody>
     <tr>
       <td>0</td>
-      <td>1.811294</td>
-      <td>1.122082</td>
-      <td>0.495559</td>
-      <td>00:15</td>
+      <td>1.910204</td>
+      <td>1.251317</td>
+      <td>0.410396</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>1.338118</td>
-      <td>1.141737</td>
-      <td>0.496764</td>
-      <td>01:06</td>
+      <td>1.281301</td>
+      <td>0.844930</td>
+      <td>0.664819</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>1.019847</td>
-      <td>0.825664</td>
-      <td>0.642892</td>
-      <td>00:14</td>
+      <td>0.971772</td>
+      <td>0.768942</td>
+      <td>0.661102</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>0.846037</td>
-      <td>0.770947</td>
-      <td>0.665749</td>
-      <td>01:14</td>
+      <td>0.820493</td>
+      <td>0.757474</td>
+      <td>0.666403</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>0.753763</td>
-      <td>0.780882</td>
-      <td>0.659071</td>
-      <td>01:07</td>
+      <td>0.739550</td>
+      <td>0.758572</td>
+      <td>0.663167</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>0.705925</td>
-      <td>0.757736</td>
-      <td>0.670396</td>
-      <td>00:16</td>
+      <td>0.692620</td>
+      <td>0.756731</td>
+      <td>0.668021</td>
+      <td>00:10</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>0.687604</td>
-      <td>00:46</td>
+      <td>0.663690</td>
+      <td>0.755893</td>
+      <td>0.664888</td>
+      <td>00:10</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0.644787</td>
+      <td>0.753760</td>
+      <td>0.667298</td>
+      <td>00:10</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>0.631905</td>
+      <td>0.753884</td>
+      <td>0.663752</td>
+      <td>00:10</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.623962</td>
+      <td>0.752913</td>
+      <td>0.665301</td>
+      <td>00:11</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-184a41e6b7e2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>learn<span class="ansi-blue-fg">.</span>fit_one_cycle<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastcore/logargs.py</span> in <span class="ansi-cyan-fg">_f</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     54</span>         init_args<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>log<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     55</span>         setattr<span class="ansi-blue-fg">(</span>inst<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;init_args&#39;</span><span class="ansi-blue-fg">,</span> init_args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> inst <span class="ansi-green-fg">if</span> to_return <span class="ansi-green-fg">else</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">return</span> _f
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/callback/schedule.py</span> in <span class="ansi-cyan-fg">fit_one_cycle</span><span class="ansi-blue-fg">(self, n_epoch, lr_max, div, div_final, pct_start, wd, moms, cbs, reset_opt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    111</span>     scheds = {&#39;lr&#39;: combined_cos(pct_start, lr_max/div, lr_max, lr_max/div_final),
-<span class="ansi-green-intense-fg ansi-bold">    112</span>               &#39;mom&#39;: combined_cos(pct_start, *(self.moms if moms is None else moms))}
-<span class="ansi-green-fg">--&gt; 113</span><span class="ansi-red-fg">     </span>self<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>n_epoch<span class="ansi-blue-fg">,</span> cbs<span class="ansi-blue-fg">=</span>ParamScheduler<span class="ansi-blue-fg">(</span>scheds<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">+</span>L<span class="ansi-blue-fg">(</span>cbs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> reset_opt<span class="ansi-blue-fg">=</span>reset_opt<span class="ansi-blue-fg">,</span> wd<span class="ansi-blue-fg">=</span>wd<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    114</span> 
-<span class="ansi-green-intense-fg ansi-bold">    115</span> <span class="ansi-red-fg"># Cell</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastcore/logargs.py</span> in <span class="ansi-cyan-fg">_f</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     54</span>         init_args<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>log<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     55</span>         setattr<span class="ansi-blue-fg">(</span>inst<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;init_args&#39;</span><span class="ansi-blue-fg">,</span> init_args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> inst <span class="ansi-green-fg">if</span> to_return <span class="ansi-green-fg">else</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">return</span> _f
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">fit</span><span class="ansi-blue-fg">(self, n_epoch, lr, wd, cbs, reset_opt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>             self<span class="ansi-blue-fg">.</span>opt<span class="ansi-blue-fg">.</span>set_hypers<span class="ansi-blue-fg">(</span>lr<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>lr <span class="ansi-green-fg">if</span> lr <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">else</span> lr<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    206</span>             self<span class="ansi-blue-fg">.</span>n_epoch <span class="ansi-blue-fg">=</span> n_epoch
-<span class="ansi-green-fg">--&gt; 207</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_fit<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;fit&#39;</span><span class="ansi-blue-fg">,</span> CancelFitException<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_end_cleanup<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    208</span> 
-<span class="ansi-green-intense-fg ansi-bold">    209</span>     <span class="ansi-green-fg">def</span> _end_cleanup<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>xb<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>yb<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>pred<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>loss <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">(</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">(</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span><span class="ansi-green-fg">None</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
-<span class="ansi-green-intense-fg ansi-bold">    153</span> 
-<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_fit</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    195</span>         <span class="ansi-green-fg">for</span> epoch <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>n_epoch<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    196</span>             self<span class="ansi-blue-fg">.</span>epoch<span class="ansi-blue-fg">=</span>epoch
-<span class="ansi-green-fg">--&gt; 197</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_epoch<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;epoch&#39;</span><span class="ansi-blue-fg">,</span> CancelEpochException<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    198</span> 
-<span class="ansi-green-intense-fg ansi-bold">    199</span>     <span class="ansi-blue-fg">@</span>log_args<span class="ansi-blue-fg">(</span>but<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;cbs&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
-<span class="ansi-green-intense-fg ansi-bold">    153</span> 
-<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_epoch</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    189</span> 
-<span class="ansi-green-intense-fg ansi-bold">    190</span>     <span class="ansi-green-fg">def</span> _do_epoch<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 191</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_do_epoch_train<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    192</span>         self<span class="ansi-blue-fg">.</span>_do_epoch_validate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    193</span> 
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_epoch_train</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">def</span> _do_epoch_train<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    182</span>         self<span class="ansi-blue-fg">.</span>dl <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>dls<span class="ansi-blue-fg">.</span>train
-<span class="ansi-green-fg">--&gt; 183</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>all_batches<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;train&#39;</span><span class="ansi-blue-fg">,</span> CancelTrainException<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    184</span> 
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-green-fg">def</span> _do_epoch_validate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> ds_idx<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> dl<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
-<span class="ansi-green-intense-fg ansi-bold">    153</span> 
-<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">all_batches</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    159</span>     <span class="ansi-green-fg">def</span> all_batches<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    160</span>         self<span class="ansi-blue-fg">.</span>n_iter <span class="ansi-blue-fg">=</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 161</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">for</span> o <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>dl<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>one_batch<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>o<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    162</span> 
-<span class="ansi-green-intense-fg ansi-bold">    163</span>     <span class="ansi-green-fg">def</span> _do_one_batch<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">one_batch</span><span class="ansi-blue-fg">(self, i, b)</span>
-<span class="ansi-green-intense-fg ansi-bold">    177</span>         self<span class="ansi-blue-fg">.</span>iter <span class="ansi-blue-fg">=</span> i
-<span class="ansi-green-intense-fg ansi-bold">    178</span>         self<span class="ansi-blue-fg">.</span>_split<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 179</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_do_one_batch<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;batch&#39;</span><span class="ansi-blue-fg">,</span> CancelBatchException<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    180</span> 
-<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">def</span> _do_epoch_train<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_with_events</span><span class="ansi-blue-fg">(self, f, event_type, ex, final)</span>
-<span class="ansi-green-intense-fg ansi-bold">    153</span> 
-<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 155</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>       self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;before_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>       <span class="ansi-blue-fg">;</span>f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span>         <span class="ansi-green-fg">except</span> ex<span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_cancel_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>   self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#39;after_{event_type}&#39;</span><span class="ansi-blue-fg">)</span>        <span class="ansi-blue-fg">;</span>final<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_do_one_batch</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    168</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>training <span class="ansi-green-fg">or</span> <span class="ansi-green-fg">not</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>yb<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">return</span>
-<span class="ansi-green-intense-fg ansi-bold">    169</span>         self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;before_backward&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 170</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_backward<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    171</span>         self<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;after_backward&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    172</span>         self<span class="ansi-blue-fg">.</span>_step<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/fastai/learner.py</span> in <span class="ansi-cyan-fg">_backward</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    150</span> 
-<span class="ansi-green-intense-fg ansi-bold">    151</span>     <span class="ansi-green-fg">def</span> _step<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>opt<span class="ansi-blue-fg">.</span>step<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 152</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">def</span> _backward<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>loss<span class="ansi-blue-fg">.</span>backward<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    153</span> 
-<span class="ansi-green-intense-fg ansi-bold">    154</span>     <span class="ansi-green-fg">def</span> _with_events<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> f<span class="ansi-blue-fg">,</span> event_type<span class="ansi-blue-fg">,</span> ex<span class="ansi-blue-fg">,</span> final<span class="ansi-blue-fg">=</span>noop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/torch/tensor.py</span> in <span class="ansi-cyan-fg">backward</span><span class="ansi-blue-fg">(self, gradient, retain_graph, create_graph)</span>
-<span class="ansi-green-intense-fg ansi-bold">    183</span>                 products<span class="ansi-blue-fg">.</span> Defaults to<span class="ansi-red-fg"> </span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span><span class="ansi-green-fg">False</span><span class="ansi-red-fg">`</span><span class="ansi-red-fg">`</span><span class="ansi-blue-fg">.</span>
-<span class="ansi-green-intense-fg ansi-bold">    184</span>         &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 185</span><span class="ansi-red-fg">         </span>torch<span class="ansi-blue-fg">.</span>autograd<span class="ansi-blue-fg">.</span>backward<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> gradient<span class="ansi-blue-fg">,</span> retain_graph<span class="ansi-blue-fg">,</span> create_graph<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span> 
-<span class="ansi-green-intense-fg ansi-bold">    187</span>     <span class="ansi-green-fg">def</span> register_hook<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> hook<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ab/lib/python3.7/site-packages/torch/autograd/__init__.py</span> in <span class="ansi-cyan-fg">backward</span><span class="ansi-blue-fg">(tensors, grad_tensors, retain_graph, create_graph, grad_variables)</span>
-<span class="ansi-green-intense-fg ansi-bold">    125</span>     Variable._execution_engine.run_backward(
-<span class="ansi-green-intense-fg ansi-bold">    126</span>         tensors<span class="ansi-blue-fg">,</span> grad_tensors<span class="ansi-blue-fg">,</span> retain_graph<span class="ansi-blue-fg">,</span> create_graph<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 127</span><span class="ansi-red-fg">         allow_unreachable=True)  # allow_unreachable flag
-</span><span class="ansi-green-intense-fg ansi-bold">    128</span> 
-<span class="ansi-green-intense-fg ansi-bold">    129</span> 
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
 </div>
 
 </div>

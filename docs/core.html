@@ -47,9 +47,103 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="TabNetModel" class="doc_header"><code>class</code> <code>TabNetModel</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TabNetModel</code>(<strong><code>emb_szs</code></strong>, <strong><code>n_cont</code></strong>, <strong><code>out_sz</code></strong>, <strong><code>embed_p</code></strong>=<em><code>0.0</code></em>, <strong><code>y_range</code></strong>=<em><code>None</code></em>, <strong><code>n_d</code></strong>=<em><code>8</code></em>, <strong><code>n_a</code></strong>=<em><code>8</code></em>, <strong><code>n_steps</code></strong>=<em><code>3</code></em>, <strong><code>gamma</code></strong>=<em><code>1.5</code></em>, <strong><code>n_independent</code></strong>=<em><code>2</code></em>, <strong><code>n_shared</code></strong>=<em><code>2</code></em>, <strong><code>epsilon</code></strong>=<em><code>1e-15</code></em>, <strong><code>virtual_batch_size</code></strong>=<em><code>128</code></em>, <strong><code>momentum</code></strong>=<em><code>0.02</code></em>) :: <code>Module</code></p>
+<h2 id="TabNetModel" class="doc_header"><code>class</code> <code>TabNetModel</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L13" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TabNetModel</code>(<strong><code>emb_szs</code></strong>, <strong><code>n_cont</code></strong>, <strong><code>out_sz</code></strong>, <strong><code>embed_p</code></strong>=<em><code>0.0</code></em>, <strong><code>y_range</code></strong>=<em><code>None</code></em>, <strong><code>n_d</code></strong>=<em><code>8</code></em>, <strong><code>n_a</code></strong>=<em><code>8</code></em>, <strong><code>n_steps</code></strong>=<em><code>3</code></em>, <strong><code>gamma</code></strong>=<em><code>1.3</code></em>, <strong><code>n_independent</code></strong>=<em><code>2</code></em>, <strong><code>n_shared</code></strong>=<em><code>2</code></em>, <strong><code>epsilon</code></strong>=<em><code>1e-15</code></em>, <strong><code>virtual_batch_size</code></strong>=<em><code>128</code></em>, <strong><code>momentum</code></strong>=<em><code>0.02</code></em>, <strong><code>mask_type</code></strong>=<em><code>'sparsemax'</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Attention model for tabular data.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="tabnet_explain" class="doc_header"><code>tabnet_explain</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L62" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>tabnet_explain</code>(<strong><code>model</code></strong>:<a href="/fast_tabnet/core.html#TabNetModel"><code>TabNetModel</code></a>, <strong><code>dl</code></strong>:<code>TabDataLoader</code>)</p>
+</blockquote>
+<p>Get explain values for a set of predictions</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="tabnet_feature_importances" class="doc_header"><code>tabnet_feature_importances</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L83" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>tabnet_feature_importances</code>(<strong><code>model</code></strong>:<a href="/fast_tabnet/core.html#TabNetModel"><code>TabNetModel</code></a>, <strong><code>dl</code></strong>:<code>TabDataLoader</code>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Module.size" class="doc_header"><code>Module.size</code><a href="https://github.com/mgrankin/fast_tabnet/tree/master/fast_tabnet/core.py#L96" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Module.size</code>(<strong><code>x</code></strong>:<code>Module</code>, <strong><code>with_grad</code></strong>:<code>bool</code>=<em><code>True</code></em>)</p>
+</blockquote>
 
 </div>
 

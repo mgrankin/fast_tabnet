@@ -38,13 +38,13 @@ Parameters `emb_szs, n_cont, out_sz, embed_p, y_range` are the same as for fasta
 
 Below is an example from fastai library, but the model in use is TabNet
 
-```
+```python
 from fastai.basics import *
 from fastai.tabular.all import *
 from fast_tabnet.core import *
 ```
 
-```
+```python
 path = untar_data(URLs.ADULT_SAMPLE)
 df = pd.read_csv(path/'adult.csv')
 df_main,df_test = df.iloc[:-1000].copy(),df.iloc[-1000:].copy()
@@ -186,7 +186,7 @@ df_main.head()
 
 
 
-```
+```python
 cat_names = ['workclass', 'education', 'marital-status', 'occupation', 
              'relationship', 'race', 'native-country', 'sex']
 cont_names = ['age', 'fnlwgt', 'education-num']
@@ -194,15 +194,16 @@ procs = [Categorify, FillMissing, Normalize]
 splits = RandomSplitter()(range_of(df_main))
 ```
 
-```
-to = TabularPandas(df_main, procs, cat_names, cont_names, y_names="salary", y_block = CategoryBlock(), splits=splits)
-```
-
-```
-dls = to.dataloaders()
+```python
+to = TabularPandas(df_main, procs, cat_names, cont_names, y_names="salary", 
+                   y_block = CategoryBlock(), splits=splits)
 ```
 
+```python
+dls = to.dataloaders(bs=32)
 ```
+
+```python
 dls.valid.show_batch()
 ```
 
@@ -229,24 +230,24 @@ dls.valid.show_batch()
   <tbody>
     <tr>
       <th>0</th>
-      <td>Federal-gov</td>
-      <td>Some-college</td>
+      <td>Private</td>
+      <td>HS-grad</td>
       <td>Married-civ-spouse</td>
-      <td>Adm-clerical</td>
-      <td>Husband</td>
-      <td>Black</td>
+      <td>Other-service</td>
+      <td>Wife</td>
+      <td>White</td>
       <td>United-States</td>
-      <td>Male</td>
+      <td>Female</td>
       <td>False</td>
-      <td>47.000000</td>
-      <td>137917.000737</td>
-      <td>10.0</td>
-      <td>&gt;=50k</td>
+      <td>39.000000</td>
+      <td>196673.000115</td>
+      <td>9.0</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Private</td>
-      <td>Some-college</td>
+      <td>HS-grad</td>
       <td>Married-civ-spouse</td>
       <td>Craft-repair</td>
       <td>Husband</td>
@@ -254,111 +255,111 @@ dls.valid.show_batch()
       <td>United-States</td>
       <td>Male</td>
       <td>False</td>
-      <td>38.000000</td>
-      <td>186934.000065</td>
-      <td>10.0</td>
+      <td>32.000000</td>
+      <td>198067.999771</td>
+      <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Private</td>
-      <td>Some-college</td>
-      <td>Divorced</td>
-      <td>Tech-support</td>
-      <td>Not-in-family</td>
+      <td>State-gov</td>
+      <td>HS-grad</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Own-child</td>
       <td>White</td>
       <td>United-States</td>
-      <td>Male</td>
+      <td>Female</td>
       <td>False</td>
-      <td>29.000000</td>
-      <td>105597.998835</td>
-      <td>10.0</td>
+      <td>18.999999</td>
+      <td>176633.999931</td>
+      <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Private</td>
       <td>Some-college</td>
-      <td>Divorced</td>
-      <td>Other-service</td>
-      <td>Not-in-family</td>
+      <td>Married-civ-spouse</td>
+      <td>Prof-specialty</td>
+      <td>Husband</td>
       <td>White</td>
       <td>United-States</td>
-      <td>Female</td>
+      <td>Male</td>
       <td>False</td>
-      <td>55.000000</td>
-      <td>169070.999493</td>
+      <td>67.999999</td>
+      <td>107626.998490</td>
       <td>10.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Private</td>
-      <td>HS-grad</td>
-      <td>Divorced</td>
-      <td>Adm-clerical</td>
-      <td>Unmarried</td>
+      <td>Masters</td>
+      <td>Never-married</td>
+      <td>Exec-managerial</td>
+      <td>Not-in-family</td>
       <td>Black</td>
       <td>United-States</td>
-      <td>Female</td>
+      <td>Male</td>
       <td>False</td>
-      <td>44.000000</td>
-      <td>103217.997147</td>
-      <td>9.0</td>
+      <td>29.000000</td>
+      <td>214925.000260</td>
+      <td>14.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Private</td>
-      <td>Preschool</td>
-      <td>Never-married</td>
-      <td>Other-service</td>
-      <td>Own-child</td>
+      <td>HS-grad</td>
+      <td>Married-civ-spouse</td>
+      <td>Priv-house-serv</td>
+      <td>Wife</td>
       <td>White</td>
       <td>United-States</td>
-      <td>Male</td>
+      <td>Female</td>
       <td>False</td>
-      <td>20.000000</td>
-      <td>277700.002135</td>
-      <td>1.0</td>
+      <td>22.000000</td>
+      <td>200109.000126</td>
+      <td>9.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>6</th>
       <td>Private</td>
       <td>Some-college</td>
-      <td>Married-civ-spouse</td>
+      <td>Never-married</td>
       <td>Sales</td>
-      <td>Husband</td>
-      <td>Black</td>
-      <td>United-States</td>
-      <td>Male</td>
-      <td>False</td>
-      <td>36.000000</td>
-      <td>262687.998842</td>
-      <td>10.0</td>
-      <td>&gt;=50k</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Private</td>
-      <td>Assoc-acdm</td>
-      <td>Married-civ-spouse</td>
-      <td>Prof-specialty</td>
-      <td>Wife</td>
+      <td>Own-child</td>
       <td>White</td>
       <td>United-States</td>
       <td>Female</td>
       <td>False</td>
-      <td>22.000001</td>
-      <td>115244.002184</td>
-      <td>12.0</td>
+      <td>18.000000</td>
+      <td>60980.998429</td>
+      <td>10.0</td>
+      <td>&lt;50k</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Private</td>
+      <td>Some-college</td>
+      <td>Separated</td>
+      <td>Adm-clerical</td>
+      <td>Not-in-family</td>
+      <td>White</td>
+      <td>United-States</td>
+      <td>Female</td>
+      <td>False</td>
+      <td>28.000000</td>
+      <td>334367.998199</td>
+      <td>10.0</td>
       <td>&lt;50k</td>
     </tr>
     <tr>
       <th>8</th>
       <td>Private</td>
-      <td>Some-college</td>
+      <td>11th</td>
       <td>Married-civ-spouse</td>
       <td>Transport-moving</td>
       <td>Husband</td>
@@ -367,31 +368,31 @@ dls.valid.show_batch()
       <td>Male</td>
       <td>False</td>
       <td>49.000000</td>
-      <td>252078.998039</td>
-      <td>10.0</td>
-      <td>&gt;=50k</td>
+      <td>123584.001097</td>
+      <td>7.0</td>
+      <td>&lt;50k</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Private</td>
-      <td>Bachelors</td>
-      <td>Separated</td>
-      <td>Sales</td>
-      <td>Unmarried</td>
+      <td>Masters</td>
+      <td>Never-married</td>
+      <td>Prof-specialty</td>
+      <td>Not-in-family</td>
       <td>White</td>
       <td>United-States</td>
       <td>Female</td>
       <td>False</td>
-      <td>41.000000</td>
-      <td>173369.999256</td>
-      <td>13.0</td>
+      <td>26.000000</td>
+      <td>397316.999922</td>
+      <td>14.0</td>
       <td>&lt;50k</td>
     </tr>
   </tbody>
 </table>
 
 
-```
+```python
 to_tst = to.new(df_test)
 to_tst.process()
 to_tst.all_cols.head()
@@ -445,9 +446,9 @@ to_tst.all_cols.head()
       <td>40</td>
       <td>2</td>
       <td>1</td>
-      <td>-1.506808</td>
-      <td>-0.561532</td>
-      <td>-1.207942</td>
+      <td>-1.505833</td>
+      <td>-0.559418</td>
+      <td>-1.202170</td>
       <td>0</td>
     </tr>
     <tr>
@@ -461,9 +462,9 @@ to_tst.all_cols.head()
       <td>40</td>
       <td>1</td>
       <td>1</td>
-      <td>-1.433470</td>
-      <td>0.412441</td>
-      <td>-0.423928</td>
+      <td>-1.432653</td>
+      <td>0.421241</td>
+      <td>-0.418032</td>
       <td>0</td>
     </tr>
     <tr>
@@ -477,9 +478,9 @@ to_tst.all_cols.head()
       <td>40</td>
       <td>2</td>
       <td>1</td>
-      <td>-0.113384</td>
-      <td>0.126033</td>
-      <td>-1.991956</td>
+      <td>-0.115406</td>
+      <td>0.132868</td>
+      <td>-1.986307</td>
       <td>0</td>
     </tr>
     <tr>
@@ -493,9 +494,9 @@ to_tst.all_cols.head()
       <td>40</td>
       <td>2</td>
       <td>1</td>
-      <td>1.500055</td>
-      <td>0.738764</td>
-      <td>-0.423928</td>
+      <td>1.494561</td>
+      <td>0.749805</td>
+      <td>-0.418032</td>
       <td>0</td>
     </tr>
     <tr>
@@ -509,9 +510,9 @@ to_tst.all_cols.head()
       <td>40</td>
       <td>2</td>
       <td>1</td>
-      <td>-0.480074</td>
-      <td>7.472530</td>
-      <td>-0.423928</td>
+      <td>-0.481308</td>
+      <td>7.529798</td>
+      <td>-0.418032</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -520,25 +521,21 @@ to_tst.all_cols.head()
 
 
 
+```python
+emb_szs = get_emb_sz(to)
 ```
-emb_szs = get_emb_sz(to); print(emb_szs)
-```
-
-    [(10, 6), (17, 8), (8, 5), (16, 8), (7, 5), (6, 4), (43, 13), (3, 3), (3, 3)]
-
 
 That's the use of the model
 
-```
-model = TabNetModel(emb_szs, len(to.cont_names), dls.c, n_d=8, n_a=32, n_steps=1); 
-```
-
-```
-opt_func = partial(Adam, wd=0.01, eps=1e-5)
-learn = Learner(dls, model, CrossEntropyLossFlat(), opt_func=opt_func, lr=3e-2, metrics=[accuracy])
+```python
+model = TabNetModel(emb_szs, len(to.cont_names), dls.c, n_d=8, n_a=8, n_steps=5, mask_type='entmax');
 ```
 
+```python
+learn = Learner(dls, model, CrossEntropyLossFlat(), opt_func=Adam, lr=3e-2, metrics=[accuracy])
 ```
+
+```python
 learn.lr_find()
 ```
 
@@ -549,7 +546,7 @@ learn.lr_find()
 
 
 
-    SuggestedLRs(lr_min=0.13182567358016967, lr_steep=0.17378008365631104)
+    SuggestedLRs(lr_min=0.2754228591918945, lr_steep=1.9054607491852948e-06)
 
 
 
@@ -557,8 +554,8 @@ learn.lr_find()
 ![png](docs/images/output_19_2.png)
 
 
-```
-learn.fit_one_cycle(10)
+```python
+learn.fit_one_cycle(5)
 ```
 
 
@@ -575,76 +572,86 @@ learn.fit_one_cycle(10)
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.405069</td>
-      <td>0.386984</td>
-      <td>0.817491</td>
-      <td>00:07</td>
+      <td>0.446274</td>
+      <td>0.414451</td>
+      <td>0.817015</td>
+      <td>00:30</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>0.384802</td>
-      <td>0.397211</td>
-      <td>0.833809</td>
-      <td>00:07</td>
+      <td>0.380002</td>
+      <td>0.393030</td>
+      <td>0.818916</td>
+      <td>00:30</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>0.358762</td>
-      <td>0.368313</td>
-      <td>0.833809</td>
-      <td>00:07</td>
+      <td>0.371149</td>
+      <td>0.359802</td>
+      <td>0.832066</td>
+      <td>00:30</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>0.362615</td>
-      <td>0.345754</td>
-      <td>0.837452</td>
-      <td>00:07</td>
+      <td>0.349027</td>
+      <td>0.352255</td>
+      <td>0.835868</td>
+      <td>00:30</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>0.359549</td>
-      <td>0.344609</td>
-      <td>0.844106</td>
-      <td>00:07</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>0.360541</td>
-      <td>0.341664</td>
-      <td>0.840938</td>
-      <td>00:07</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>0.353671</td>
-      <td>0.346765</td>
-      <td>0.838086</td>
-      <td>00:07</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>0.348572</td>
-      <td>0.340566</td>
-      <td>0.845374</td>
-      <td>00:07</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>0.343425</td>
-      <td>0.337662</td>
-      <td>0.843948</td>
-      <td>00:07</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>0.329840</td>
-      <td>0.337043</td>
-      <td>0.846800</td>
-      <td>00:07</td>
+      <td>0.355339</td>
+      <td>0.349360</td>
+      <td>0.836819</td>
+      <td>00:30</td>
     </tr>
   </tbody>
 </table>
+
+
+## Tabnet interpretability
+
+```python
+# feature importance for 2k rows
+dl = learn.dls.test_dl(df.iloc[:2000], bs=256)
+feature_importances = tabnet_feature_importances(learn.model, dl)
+```
+
+```python
+# per sample interpretation
+dl = learn.dls.test_dl(df.iloc[:20], bs=20)
+res_explain, res_masks = tabnet_explain(learn.model, dl)
+```
+
+```python
+plt.xticks(rotation='vertical')
+plt.bar(dl.x_names, feature_importances, color='g')
+plt.show()
+```
+
+
+![png](docs/images/output_24_0.png)
+
+
+```python
+def plot_explain(masks, lbls, figsize=(12,12)):
+    "Plots masks with `lbls` (`dls.x_names`)"
+    fig = plt.figure(figsize=figsize)
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+    plt.yticks(np.arange(0, len(masks), 1.0))
+    plt.xticks(np.arange(0, len(masks[0]), 1.0))
+    ax.set_xticklabels(lbls, rotation=90)
+    plt.ylabel('Sample Number')
+    plt.xlabel('Variable')
+    plt.imshow(masks)
+```
+
+```python
+plot_explain(res_explain, dl.x_names)
+```
+
+
+![png](docs/images/output_26_0.png)
 
 
 ## Hyperparameter search with Bayesian Optimization
@@ -654,11 +661,11 @@ If your dataset isn't huge you can tune hyperparameters for tabular models with 
 
 You may need to install the optimizer `pip install bayesian-optimization`
 
-```
+```python
 from functools import lru_cache
 ```
 
-```
+```python
 # The function we'll optimize
 @lru_cache(1000)
 def get_accuracy(n_d:Int, n_a:Int, n_steps:Int):
@@ -670,13 +677,13 @@ def get_accuracy(n_d:Int, n_a:Int, n_steps:Int):
 
 This implementation of Bayesian Optimization doesn't work naturally with descreet values. That's why we use wrapper with `lru_cache`.
 
-```
+```python
 def fit_accuracy(pow_n_d, pow_n_a, pow_n_steps):
     n_d, n_a, n_steps = map(lambda x: 2**int(x), (pow_n_d, pow_n_a, pow_n_steps))
     return get_accuracy(n_d, n_a, n_steps)
 ```
 
-```
+```python
 from bayes_opt import BayesianOptimization
 
 # Bounded region of parameter space
@@ -688,7 +695,7 @@ optimizer = BayesianOptimization(
 )
 ```
 
-```
+```python
 optimizer.maximize(
     init_points=15,
     n_iter=100,
@@ -6800,7 +6807,7 @@ optimizer.maximize(
     =============================================================
 
 
-```
+```python
 optimizer.max['target']
 ```
 
@@ -6811,7 +6818,7 @@ optimizer.max['target']
 
 
 
-```
+```python
 {key: 2**int(value)
   for key, value in optimizer.max['params'].items()}
 ```
@@ -6828,23 +6835,23 @@ optimizer.max['target']
 
 If your dataset is so big it doesn't fit in memory, you can load a chunk of it each epoch.
 
-```
+```python
 df = pd.read_csv(path/'adult.csv')
 df_main,df_valid = df.iloc[:-1000].copy(),df.iloc[-1000:].copy()
 ```
 
-```
+```python
 # choose size that fit in memory
 dataset_size = 1000
 ```
 
-```
+```python
 # load chunk with your own code
 def load_chunk():
     return df_main.sample(dataset_size).copy()
 ```
 
-```
+```python
 df_small = load_chunk()
 cat_names = ['workclass', 'education', 'marital-status', 'occupation', 
              'relationship', 'race', 'native-country', 'sex']
@@ -6853,19 +6860,19 @@ procs = [Categorify, FillMissing, Normalize]
 splits = RandomSplitter()(range_of(df_small))
 ```
 
-```
+```python
 to = TabularPandas(df_small, procs, cat_names, cont_names, y_names="salary", y_block = CategoryBlock(), 
                    splits=None, do_setup=True)
 ```
 
-```
+```python
 # save the validation set
 to_valid = to.new(df_valid)
 to_valid.process()
 val_dl = TabDataLoader(to_valid.train)
 ```
 
-```
+```python
 len(to.train)
 ```
 
@@ -6876,7 +6883,7 @@ len(to.train)
 
 
 
-```
+```python
 class ReloadCallback(Callback):
     def begin_epoch(self): 
         df_small = load_chunk()
@@ -6886,19 +6893,19 @@ class ReloadCallback(Callback):
         self.learn.dls = DataLoaders(trn_dl, val_dl).cuda()
 ```
 
-```
+```python
 dls = to.dataloaders()
 emb_szs = get_emb_sz(to)
 model = TabNetModel(emb_szs, len(to.cont_names), dls.c, n_d=8, n_a=32, n_steps=1); 
 ```
 
-```
+```python
 opt_func = partial(Adam, wd=0.01, eps=1e-5)
 learn = Learner(dls, model, CrossEntropyLossFlat(), opt_func=opt_func, lr=3e-2, metrics=[accuracy])
 learn.add_cb(ReloadCallback());
 ```
 
-```
+```python
 learn.fit_one_cycle(10)
 ```
 
