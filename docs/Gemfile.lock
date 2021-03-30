@@ -192,7 +192,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -254,7 +254,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll (>= 3.7)
-  kramdown (>= 2.3.1)
+  kramdown (>= 2.3.0)
   nokogiri (< 1.10.9)
 
 BUNDLED WITH
