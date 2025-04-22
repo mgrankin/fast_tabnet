@@ -211,7 +211,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.25.5)
     multipart-post (2.1.1)
-    nokogiri (1.18.4)
+    nokogiri (1.18.8)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     octokit (4.18.0)
@@ -257,7 +257,7 @@ DEPENDENCIES
   github-pages
   jekyll (>= 3.7)
   kramdown (>= 2.3.0)
-  nokogiri (< 1.18.5)
+  nokogiri (< 1.18.9)
 
 BUNDLED WITH
    2.0.2
